@@ -1,0 +1,144 @@
+.btn {
+    width: 200px;
+    height: 50px;
+
+    border-radius: 4px;
+    padding: 10px 20px;
+    border: none;
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+    @include flex ();
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--main-text-color-theme-dark);
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background-color 250ms var(--timing-function);
+
+        &:hover,
+    &:focus {
+            background-color: var(--btn-background-color);
+        }
+    
+       &__telegram {
+            width: 200px;
+            fill: currentColor;
+        }
+
+        &__telegram--position {
+            margin-left: 10px;
+        }
+
+}
+
+.hero__btn--position {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form__btn--position {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.action__bnt--position {
+  margin-left: 12px;
+}
+
+
+// Clouse botton
+
+.modal-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+
+    @include flex ();
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 0;
+
+    background-color: inherit;
+    border: 1px solid var(--modal-border-btn-color);
+    color: var(--black);
+    cursor: pointer;
+
+    transition: color 250ms var(--timing-function);
+
+    &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+
+        &__icon {
+    fill: currentColor;
+}
+
+}
+
+
+
+
+// Buttons__list
+
+.button__list {
+    display: flex;
+    justify-content: center;
+
+    &--position {
+            margin-bottom: 50px;
+        }
+}
+
+
+.button__item--position {
+    margin-left: 8px;
+}
+
+.button__pic {
+    min-width: 73px;
+    height: 38px;
+    border-radius: 4px;
+    border: none;
+    padding: 6px 22px;
+
+    color: var(--main-text-color-theme-light);
+    background-color: var(--accent-background-color-grey);
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    cursor: pointer;
+
+    transition: color 250ms var(--timing-function),
+        background-color 250ms var(--timing-function),
+        box-shadow 250ms var(--timing-function);
+
+&:hover,
+    &:focus,
+    &--current {
+        background-color: var(--accent-color);
+        color: var(--main-text-color-theme-dark);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+
+}
+
+

@@ -1,0 +1,177 @@
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--modal-background-color);
+    transition: opacity 250ms var(--timing-function),
+        visibility 250ms var(--timing-function);
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    width: 528px;
+    border-radius: 4px;
+    padding: 40px;
+
+    background-color: var(--main-text-color-theme-dark);
+
+    transition: transform 250ms var(--timing-function);
+}
+
+/* Для ментора!!! Проблемное место, где не получается 
+нормальным путем убрать "is-hidden" т.к. есть привязка к JS
+Буду рад Вашему совету.*/
+.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+.modal-action {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--main-text-color-theme-light);
+}
+
+.form__box {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: var(--main-text-color-theme-light);
+
+    &--position {
+            margin-bottom: 10px;
+        }
+}
+
+.form__span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: var(--secondary-text-color-theme-light);
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color-grey);
+
+    outline: transparent;
+
+    transition: border-color 250ms var(--timing-function);
+
+    &--position {
+            margin-top: 4px;
+        }
+    
+    &:focus,
+    &:hover {
+        border-color: var(--accent-color);
+        cursor: pointer;
+    }
+}
+
+.form__icon {
+    position: absolute;
+    left: 12px;
+    bottom: 11px;
+    fill: currentColor;
+
+    transition: fill 250ms var(--timing-function);
+}
+
+.form__label:focus-within>.form__icon {
+    fill: var(--accent-color);
+}
+
+.textarea {
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+}
+
+.agreement__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &--position {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+}
+
+.agreement-box {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    color: var(--main-text-color-theme-dark);
+    border: 2px solid var(--main-text-color-theme-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    cursor: pointer;
+
+    transition: border-color 250ms var(--timing-function),
+        background-color 250ms var(--timing-function);
+    
+    .agreement__input:checked+& {
+            background-color: var(--accent-color);
+            border: 2px solid var(--accent-color);
+        }
+    
+        .agreement__input:hover+&,
+        .agreement__input:focus+& {
+            border: 2px solid var(--accent-color);
+        }
+
+        &__icon {
+            fill: currentColor;
+        }
+}
+
+.agreement__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: var(--secondary-text-color-theme-light);
+}
+
+.agreement__link {
+    text-decoration-line: underline;
+    color: var(--accent-color);
+}

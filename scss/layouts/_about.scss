@@ -1,0 +1,44 @@
+
+.about {
+  padding-top: 0;
+}
+
+.about__list {
+  display: flex;
+}
+
+.about__item {
+  position: relative;
+  width: calc((100% - 60px) / 3);
+
+  &--position {
+      margin-right: 30px;
+    }
+}
+
+
+
+.about__img {
+  display: block;
+}
+
+.about__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  display: block;
+  padding: 27px 40px;
+  margin: 0;
+  background-color: var(--background-dark-transparant);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--main-text-color-theme-dark);
+}

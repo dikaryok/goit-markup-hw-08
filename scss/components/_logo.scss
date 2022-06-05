@@ -1,0 +1,27 @@
+
+.logo {
+  padding: 24px 0px;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  color: #000000;
+
+  &--blue {
+      color: var(--accent-color);
+    }
+
+    &--wite {
+    color: var(--main-text-color-theme-dark);
+}
+}
+
+.nav__logo--position {
+  margin-right: 93px;
+}
+
+
+
+
