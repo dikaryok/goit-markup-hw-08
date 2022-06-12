@@ -1,3 +1,4 @@
+
 .btn {
     width: 200px;
     height: 50px;
@@ -51,7 +52,13 @@
 }
 
 .action__bnt--position {
-  margin-left: 12px;
+    @include size(not-desktop) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include size(desktop) {
+        margin-left: 12px;
+    }  
 }
 
 
@@ -98,15 +105,39 @@
     display: flex;
     justify-content: center;
 
+    @include size(mobile-only) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: -15px;
+        
+    }
+
     &--position {
+        margin-bottom: 40px;
+    
+        @include size(tablet) {
+            margin-bottom: 30px;
+        }
+
+        @include size(desktop) {
             margin-bottom: 50px;
+        }
         }
 }
 
 
-.button__item--position {
-    margin-left: 8px;
-}
+
+
+.button__item {
+    @include size(mobile-only) {
+        margin-top: 15px;
+    }
+    
+
+    &--position {
+            margin-right: 8px;
+        }
+} 
 
 .button__pic {
     min-width: 73px;

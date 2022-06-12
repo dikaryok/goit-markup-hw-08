@@ -1,5 +1,8 @@
 
 .about {
+  @include size(not-desktop) {
+    display: none;
+  }
   padding-top: 0;
 }
 

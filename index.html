@@ -18,62 +18,107 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body>
+  <body class="modal-open">
     <!-- Header -->
     <header class="header">
       <nav class="container nav">
         <a class="link logo nav__logo--position" href="./index.html" lang="en"
           ><span class="logo--blue">Web</span>Studio
         </a>
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            class="menu-button__icon"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-close" href="./images/svg/icons.svg#close"></use>
+            <use class="icon-menu" href="./images/svg/icons.svg#menu"></use>
+          </svg>
+        </button>
 
-        <ul class="list menu">
-          <li class="menu__item">
-            <a class="link menu__link menu__link--current" href="./index.html"
-              >Студия</a
-            >
-          </li>
-          <li class="menu__item">
-            <a class="link menu__link" href="./portfolio.html">Портфолио</a>
-          </li>
-          <li class="menu__item">
-            <a class="link menu__link" href="#">Контакты</a>
-          </li>
-        </ul>
+        <div class="menu-container" id="menu-container" data-menu>
+          <ul class="list menu">
+            <li class="menu__item">
+              <a class="link menu__link menu__link--current" href="./index.html"
+                >Студия</a
+              >
+            </li>
+            <li class="menu__item">
+              <a class="link menu__link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="menu__item">
+              <a class="link menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
 
-        <ul class="list contacts contacts--position">
-          <li class="contacts__item--position">
-            <a
-              class="link contacts__link contacts__link--position"
-              href="mailto:info@devstudio.com"
-              title="Отправить письмо"
+          <ul class="list contacts contacts--position">
+            <li
+              class="contacts__item contacts__item--position contacts__item--bottom"
             >
-              <svg
-                class="contacts__icon contacts__icon--position"
-                width="16"
-                height="12"
+              <a
+                class="link contacts__link contacts__link--position contacts__link--tel"
+                href="tel:0961111111"
+                title="Набрать номер"
               >
-                <use href="./images/svg/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item--position">
-            <a
-              class="link contacts__link contacts__link--position"
-              href="tel:0961111111"
-              title="Набрать номер"
-            >
-              <svg
-                class="contacts__icon contacts__icon--position"
-                width="10"
-                height="16"
+                <svg
+                  class="contacts__icon contacts__icon--position"
+                  width="10"
+                  height="16"
+                >
+                  <use href="./images/svg/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
               >
-                <use href="./images/svg/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+            </li>
+            <li class="contacts__item contacts__item--position">
+              <a
+                class="link contacts__link contacts__link--position contacts__link--mail"
+                href="mailto:info@devstudio.com"
+                title="Отправить письмо"
+              >
+                <svg
+                  class="contacts__icon contacts__icon--position"
+                  width="16"
+                  height="12"
+                >
+                  <use href="./images/svg/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="list social-menu">
+            <li class="social-menu__item">
+              <a
+                href="https://www.instagram.com/"
+                class="link social-menu__link"
+                >Instagram</a
+              >
+            </li>
+            <li class="social-menu__item">
+              <a href="https://twitter.com/" class="link social-menu__link"
+                >Twitter</a
+              >
+            </li>
+            <li class="social-menu__item">
+              <a href="https://www.facebook.com/" class="link social-menu__link"
+                >Facebook</a
+              >
+            </li>
+            <li class="social-menu__item">
+              <a href="https://www.linkedin.com/" class="link social-menu__link"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
@@ -253,10 +298,15 @@
             <li class="about__item about__item--position">
               <img
                 class="about__img"
+                srcset="
+                  ./images/gallery/img_1.jpg    1x,
+                  ./images/gallery/img_1@2x.jpg 2x
+                "
                 src="./images/gallery/img_1.jpg"
                 alt="Создание кода для сайта"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <p class="about__text">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
             </li>
@@ -264,10 +314,15 @@
             <li class="about__item about__item--position">
               <img
                 class="about__img"
+                srcset="
+                  ./images/gallery/img_2.jpg    1x,
+                  ./images/gallery/img_2@2x.jpg 2x
+                "
                 src="./images/gallery/img_2.jpg"
                 alt="Адаптация под мобильное утройство"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <p class="about__text">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
             </li>
@@ -275,10 +330,15 @@
             <li class="about__item">
               <img
                 class="about__img"
+                srcset="
+                  ./images/gallery/img_3.jpg    1x,
+                  ./images/gallery/img_3@2x.jpg 2x
+                "
                 src="./images/gallery/img_3.jpg"
                 alt="Выбор цветовой гаммы"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <p class="about__text">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
             </li>
@@ -292,13 +352,74 @@
           <h2 class="subject subtitle">Наша команда</h2>
           <ul class="list employees__list">
             <li class="employees__item employees__item--position">
-              <img
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/employeese/ihor_1200.webp    1x,
+                    ./images/employeese/ihor_1200@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/employeese/ihor_1200.jpg    1x,
+                    ./images/employeese/ihor_1200@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/employeese/ihor_768.webp    1x,
+                    ./images/employeese/ihor_768@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/employeese/ihor_768.jpg    1x,
+                    ./images/employeese/ihor_768@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/employeese/ihor_480.webp    1x,
+                    ./images/employeese/ihor_480@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/employeese/ihor_480.jpg    1x,
+                    ./images/employeese/ihor_480@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <img
+                  class="employees__img"
+                  src="./images/employeese/ihor_480.jpg"
+                  alt="Наш сотрудник"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
+              <!-- <img
                 class="employees__img"
                 src="./images/employeese/ihor.jpg"
                 alt="Наш сотрудник"
                 width="270"
                 height="260"
-              />
+              /> -->
               <div class="employees-box">
                 <h3 class="employees__name subtitle">Игорь Демьяненко</h3>
                 <p class="employess__job" lang="en">Product Designer</p>
@@ -360,13 +481,75 @@
             </li>
 
             <li class="employees__item employees__item--position">
-              <img
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/employeese/olha_1200.webp    1x,
+                    ./images/employeese/olha_1200@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/employeese/olha_1200.jpg    1x,
+                    ./images/employeese/olha_1200@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/employeese/olha_768.webp    1x,
+                    ./images/employeese/olha_768@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/employeese/olha_768.jpg    1x,
+                    ./images/employeese/olha_768@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/employeese/olha_480.webp    1x,
+                    ./images/employeese/olha_480@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/employeese/olha_480.jpg    1x,
+                    ./images/employeese/olha_480@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <img
+                  class="employees__img"
+                  src="./images/employeese/olha_480.jpg"
+                  alt="Наш сотрудник"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
+
+              <!-- <img
                 class="employees__img"
                 src="./images/employeese/olha.jpg"
                 alt="Наш сотрудник"
                 width="270"
                 height="260"
-              />
+              /> -->
               <div class="employees-box">
                 <h3 class="employees__name subtitle">Ольга Репина</h3>
                 <p class="employess__job" lang="en">Frontend Developer</p>
@@ -428,13 +611,74 @@
             </li>
 
             <li class="employees__item employees__item--position">
-              <img
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/employeese/nikolay_1200.webp    1x,
+                    ./images/employeese/nikolay_1200@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/employeese/nikolay_1200.jpg    1x,
+                    ./images/employeese/nikolay_1200@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/employeese/nikolay_768.webp    1x,
+                    ./images/employeese/nikolay_768@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/employeese/nikolay_768.jpg    1x,
+                    ./images/employeese/nikolay_768@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/employeese/nikolay_480.webp    1x,
+                    ./images/employeese/nikolay_480@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/employeese/nikolay_480.jpg    1x,
+                    ./images/employeese/nikolay_480@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <img
+                  class="employees__img"
+                  src="./images/employeese/nikolay_480.jpg"
+                  alt="Наш сотрудник"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
+              <!-- <img
                 class="employees__img"
                 src="./images/employeese/nikolay.jpg"
                 alt="Наш сотрудник"
                 width="270"
                 height="260"
-              />
+              /> -->
               <div class="employees-box">
                 <h3 class="employees__name subtitle">Николай Тарасов</h3>
                 <p class="employess__job" lang="en">Marketing</p>
@@ -496,13 +740,74 @@
             </li>
 
             <li class="employees__item">
-              <img
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/employeese/michail_1200.webp    1x,
+                    ./images/employeese/michail_1200@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/employeese/michail_1200.jpg    1x,
+                    ./images/employeese/michail_1200@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/employeese/michail_768.webp    1x,
+                    ./images/employeese/michail_768@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/employeese/michail_768.jpg    1x,
+                    ./images/employeese/michail_768@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/employeese/michail_480.webp    1x,
+                    ./images/employeese/michail_480@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/employeese/michail_480.jpg    1x,
+                    ./images/employeese/michail_480@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <img
+                  class="employees__img"
+                  src="./images/employeese/michail_480.jpg"
+                  alt="Наш сотрудник"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
+              <!-- <img
                 class="employees__img"
                 src="./images/employeese/michail.jpg"
                 alt="Наш сотрудник"
                 width="270"
                 height="260"
-              />
+              /> -->
               <div class="employees-box">
                 <h3 class="employees__name subtitle">Михаил Ермаков</h3>
                 <p class="employess__job" lang="en">UI Designer</p>
@@ -644,7 +949,7 @@
 
     <footer class="footer">
       <div class="container footer--position">
-        <div class="footer__box">
+        <div class="footer__box footer__box--position">
           <a
             class="link logo logo--wite"
             href="./index.html"
@@ -686,7 +991,7 @@
             </ul>
           </address>
         </div>
-        <div class="footer__box">
+        <div class="footer__box footer__box--position">
           <h3 class="caption footer__title">ПРИСОЕДИНЯЙТЕСЬ</h3>
           <ul class="list social__list social__list--dark">
             <li class="social__item">
@@ -770,5 +1075,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
