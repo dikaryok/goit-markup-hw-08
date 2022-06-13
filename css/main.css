@@ -451,7 +451,7 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
     width: 450px;
   }
@@ -1491,8 +1491,10 @@ img {
   background-color: var(--accent-background-color-dark);
 }
 
-.footer--position {
-  text-align: center;
+@media screen and (max-width: 1199.98px) {
+  .footer--position {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 768px) {

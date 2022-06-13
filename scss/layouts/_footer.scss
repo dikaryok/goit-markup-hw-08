@@ -5,7 +5,10 @@
   background-color: var(--accent-background-color-dark);
 
   &--position {
-    text-align: center;
+    @include size(not-desktop) {
+      text-align: center;
+    }
+   
 
     @include size(tablet) {
       display: flex;
@@ -24,6 +27,7 @@
   &:first-child {
       width: 231px;
       margin-right: 70px;
+
     }
   
     &:nth-child(2) {
