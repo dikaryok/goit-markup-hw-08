@@ -174,15 +174,16 @@
 
 .agreement__text {
     margin: 0;
+    padding-left: 8px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-
+    
     color: var(--secondary-text-color-theme-light);
 
     @include size(not-desktop) {
-        padding-left: 8px;
+    
 font-size: 12px;
 line-height: 1.17;
     }
