@@ -704,6 +704,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow-y: scroll;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -753,6 +754,10 @@ img {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 @media screen and (max-width: 767px) {
